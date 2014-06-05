@@ -59,7 +59,6 @@ class MasterViewController: UITableViewController, ItemFetcherDelegate {
         else if segue.identifier == "showComments" {
             if let cell = sender as? UITableViewCell {
                 let indexPath = self.tableView.indexPathForCell(cell)
-                println(indexPath)
             }
         }
     }

@@ -28,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		287773791940EE9C00B93786 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		2877737A1940EE9C00B93786 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		288B40EF193FF7AE00273522 /* ProductHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288B40F3193FF7AE00273522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288B40F4193FF7AE00273522 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,8 @@
 		288B40F2193FF7AE00273522 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				287773791940EE9C00B93786 /* Montserrat-Bold.ttf */,
+				2877737A1940EE9C00B93786 /* Montserrat-Regular.ttf */,
 				288B40F3193FF7AE00273522 /* Info.plist */,
 			);
 			name = "Supporting Files";

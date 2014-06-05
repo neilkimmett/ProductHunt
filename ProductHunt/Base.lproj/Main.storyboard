@@ -104,8 +104,8 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="vC3-pB-5Vb" kind="show" identifier="showDetail" id="6S0-TO-JiA"/>
-                                    <segue destination="8F5-sA-rhV" kind="showDetail" trigger="accessoryAction" id="yvN-cA-mkl"/>
+                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
+                                    <segue destination="8F5-sA-rhV" kind="showDetail" identifier="showComments" trigger="accessoryAction" id="yvN-cA-mkl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -115,13 +115,13 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Product Hunt" id="Zdf-7t-Un8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="906" y="-630"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Table View Controller - Comments-->
         <scene sceneID="gb5-fq-khS">
             <objects>
                 <tableViewController id="s5q-3j-008" sceneMemberID="viewController">
@@ -143,7 +143,7 @@
                             <outlet property="delegate" destination="s5q-3j-008" id="CKw-pY-CYU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="XIP-xo-fap"/>
+                    <navigationItem key="navigationItem" title="Comments" id="XIP-xo-fap"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Kn-lB-sG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
