@@ -31,6 +31,9 @@ class MasterViewController: UITableViewController, ItemFetcherDelegate {
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.endIndex-1].topViewController as? DetailViewController
+            split.preferredDisplayMode = .AllVisible
+//            let openButton = UIBarButtonItem(title: "Posts", style: .Plain, target: self.splitViewController, action: "showViewController")
+//            navigationItem.leftBarButtonItem = openButton
         }
     }
     
@@ -83,11 +86,18 @@ class MasterViewController: UITableViewController, ItemFetcherDelegate {
 
         if let items = self.items {
             let item = items[indexPath.row]
-            cell.textLabel.text = item.title
+
+            let underlineColor = UIColor(white: 0, alpha: 0.098)
+            var attrs :NSDictionary = [
+                NSUnderlineColorAttributeName: underlineColor,
+                NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleSingle.toRaw()
+            ]
+            cell.textLabel.attributedText = NSAttributedString(string: item.title, attributes: attrs)
             cell.detailTextLabel.text = item.subtitle
         }
         else {
-            cell.textLabel.text = "no items"
+            cell.textLabel.text = "Loading..."
+            cell.detailTextLabel.text = nil
         }
 
         return cell

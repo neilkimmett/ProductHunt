@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import WebKit
 
 class DetailViewController: UIViewController, UISplitViewControllerDelegate {
 
     @IBOutlet var webView: UIWebView
+    @IBOutlet var placeholderView: UIView
+    
     var masterPopoverController: UIPopoverController? = nil
-
+    
     var detailItem: Item? {
         didSet {
             self.title = detailItem?.title
@@ -26,8 +29,14 @@ class DetailViewController: UIViewController, UISplitViewControllerDelegate {
         // Update the user interface for the detail item.
         if let detail: Item = self.detailItem {
             let req = NSURLRequest(URL: NSURL(string: detail.url))
+
             self.webView?.loadRequest(req)
+            
+            if let placeholder = self.placeholderView {
+                placeholder.hidden = true
+            }
         }
+
     }
 
     override func viewDidLoad() {
@@ -36,15 +45,10 @@ class DetailViewController: UIViewController, UISplitViewControllerDelegate {
         self.configureView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // #pragma mark - Split view
 
     func splitViewController(splitController: UISplitViewController, willHideViewController viewController: UIViewController, withBarButtonItem barButtonItem: UIBarButtonItem, forPopoverController popoverController: UIPopoverController) {
-        barButtonItem.title = "Master" // NSLocalizedString(@"Master", @"Master")
+        barButtonItem.title = "Posts"
         self.navigationItem.setLeftBarButtonItem(barButtonItem, animated: true)
         self.masterPopoverController = popoverController
     }

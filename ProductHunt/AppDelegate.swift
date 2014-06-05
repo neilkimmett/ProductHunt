@@ -9,6 +9,7 @@
 import UIKit
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
@@ -19,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let splitViewController = self.window!.rootViewController as UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.endIndex-1] as UINavigationController
         splitViewController.delegate = navigationController.topViewController as DetailViewController
+
+        let font = UIFont(name:"Montserrat-Bold", size: 16)
+        let attrs = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor()]
+        UINavigationBar.appearance().titleTextAttributes = attrs
+        UINavigationBar.appearance().barTintColor = UIColor(r: 218.0, g: 85.0, b: 47.0)
+        UIBarButtonItem.appearance().setTitleTextAttributes(attrs, forState: .Normal)
         return true
     }
 
@@ -43,7 +50,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

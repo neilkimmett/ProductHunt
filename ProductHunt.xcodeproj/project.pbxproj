@@ -15,6 +15,10 @@
 		288B410A193FF7AE00273522 /* ProductHuntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288B4109193FF7AE00273522 /* ProductHuntTests.swift */; };
 		288B4114193FF7E300273522 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288B4113193FF7E300273522 /* Item.swift */; };
 		288B4116193FF88200273522 /* ItemFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288B4115193FF88200273522 /* ItemFetcher.swift */; };
+		289152FE1941280E0033FDD8 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 287773791940EE9C00B93786 /* Montserrat-Bold.ttf */; };
+		289152FF1941280E0033FDD8 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2877737A1940EE9C00B93786 /* Montserrat-Regular.ttf */; };
+		28915301194130270033FDD8 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28915300194130270033FDD8 /* UIColorExtensions.swift */; };
+		28915303194138780033FDD8 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28915302194138780033FDD8 /* FontAwesome.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,8 @@
 		288B4109193FF7AE00273522 /* ProductHuntTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductHuntTests.swift; sourceTree = "<group>"; };
 		288B4113193FF7E300273522 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		288B4115193FF88200273522 /* ItemFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemFetcher.swift; sourceTree = "<group>"; };
+		28915300194130270033FDD8 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		28915302194138780033FDD8 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 		288B40E6193FF7AE00273522 = {
 			isa = PBXGroup;
 			children = (
+				28915300194130270033FDD8 /* UIColorExtensions.swift */,
 				288B40F1193FF7AE00273522 /* ProductHunt */,
 				288B4106193FF7AE00273522 /* ProductHuntTests */,
 				288B40F0193FF7AE00273522 /* Products */,
@@ -99,6 +106,7 @@
 			children = (
 				287773791940EE9C00B93786 /* Montserrat-Bold.ttf */,
 				2877737A1940EE9C00B93786 /* Montserrat-Regular.ttf */,
+				28915302194138780033FDD8 /* FontAwesome.otf */,
 				288B40F3193FF7AE00273522 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -210,6 +218,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				289152FE1941280E0033FDD8 /* Montserrat-Bold.ttf in Resources */,
+				28915303194138780033FDD8 /* FontAwesome.otf in Resources */,
+				289152FF1941280E0033FDD8 /* Montserrat-Regular.ttf in Resources */,
 				288B40FC193FF7AE00273522 /* Main.storyboard in Resources */,
 				288B40FE193FF7AE00273522 /* Images.xcassets in Resources */,
 			);
@@ -232,6 +243,7 @@
 				288B4114193FF7E300273522 /* Item.swift in Sources */,
 				288B4116193FF88200273522 /* ItemFetcher.swift in Sources */,
 				288B40F9193FF7AE00273522 /* DetailViewController.swift in Sources */,
+				28915301194130270033FDD8 /* UIColorExtensions.swift in Sources */,
 				288B40F7193FF7AE00273522 /* MasterViewController.swift in Sources */,
 				288B40F5193FF7AE00273522 /* AppDelegate.swift in Sources */,
 			);
