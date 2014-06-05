@@ -48,15 +48,22 @@ class MasterViewController: UITableViewController, ItemFetcherDelegate {
     // #pragma mark - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
-        let indexPath = self.tableView.indexPathForSelectedRow()
-        if let item = self.items?[indexPath.row] {
-            if segue.identifier == "showDetail" {
-                ((segue.destinationViewController as UINavigationController).topViewController as DetailViewController).detailItem = item
+        if segue.identifier == "showDetail" {
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            if let item = self.items?[indexPath.row] {
+                let nav = segue.destinationViewController as UINavigationController
+                let detail = nav.topViewController as DetailViewController
+                detail.detailItem = item
+            }
+        }
+        else if segue.identifier == "showComments" {
+            if let cell = sender as? UITableViewCell {
+                let indexPath = self.tableView.indexPathForCell(cell)
+                println(indexPath)
             }
         }
     }
-
+    
     // #pragma mark - Table View
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
