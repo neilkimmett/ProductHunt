@@ -63,7 +63,7 @@ class MasterViewController: UITableViewController, ItemFetcherDelegate {
                 if let cell = sender?.superview?.superview? as? UITableViewCell {
                     
                     let indexPath = self.tableView.indexPathForCell(cell)
-                    self.tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: .None)
+                    self.tableView.selectRowAtIndexPath(indexPath, animated: false, scrollPosition: .None)
                 }
             default:
                 break
