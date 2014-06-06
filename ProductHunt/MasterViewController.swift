@@ -51,18 +51,22 @@ class MasterViewController: UITableViewController, ItemFetcherDelegate {
     // #pragma mark - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-            let indexPath = self.tableView.indexPathForSelectedRow()
-            if let item = self.items?[indexPath.row] {
-                let nav = segue.destinationViewController as UINavigationController
-                let detail = nav.topViewController as DetailViewController
-                detail.detailItem = item
-            }
-        }
-        else if segue.identifier == "showComments" {
-            if let cell = sender as? UITableViewCell {
-                let indexPath = self.tableView.indexPathForCell(cell)
-            }
+        switch segue.identifier! {
+            case "showDetail":
+                let indexPath = self.tableView.indexPathForSelectedRow()
+                if let item = self.items?[indexPath.row] {
+                    let nav = segue.destinationViewController as UINavigationController
+                    let detail = nav.topViewController as DetailViewController
+                    detail.detailItem = item
+                }
+            case "showComments":
+                if let cell = sender?.superview?.superview? as? UITableViewCell {
+                    
+                    let indexPath = self.tableView.indexPathForCell(cell)
+                    self.tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: .None)
+                }
+            default:
+                break
         }
     }
     
