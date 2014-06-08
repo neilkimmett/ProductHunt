@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-@objc protocol ItemFetcherDelegate {
+protocol ItemFetcherDelegate {
     func itemFetcherDidFetchItems(items : Item[])
 }
 
 class ItemFetcher {
     
-    weak var delegate: ItemFetcherDelegate?
+    var delegate: ItemFetcherDelegate?
     
     init(delegate: ItemFetcherDelegate) {
         self.delegate = delegate
@@ -37,7 +37,7 @@ class ItemFetcher {
                     let title = itemJSON["title"]?["text"] as String
                     let subtitle = itemJSON["subtitle"] as String
                     let avatar_url = itemJSON["avatar_url"]?["src"] as String
-                    return Item(url: url, title: title, subtitle: subtitle, avatar_url: avatar_url)
+                    return Item(url: url, title: title, subtitle: subtitle, avatar_url: NSURL(string: avatar_url))
                 }
                 self.delegate?.itemFetcherDidFetchItems(items)
             }

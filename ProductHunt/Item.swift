@@ -8,15 +8,9 @@
 
 import Foundation
 
-class Item {
+struct Item {
     let url : String
     let title : String
     let subtitle : String
     let avatar_url: NSURL
-    init(url: String, title : String, subtitle : String, avatar_url: String) {
-        self.url = url
-        self.title = title
-        self.subtitle = subtitle
-        self.avatar_url = NSURL(string: avatar_url)
-    }
 }

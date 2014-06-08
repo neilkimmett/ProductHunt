@@ -145,10 +145,10 @@
             </objects>
             <point key="canvasLocation" x="906" y="-630"/>
         </scene>
-        <!--Table View Controller - Comments-->
+        <!--Comments View Controller - Comments-->
         <scene sceneID="gb5-fq-khS">
             <objects>
-                <tableViewController id="s5q-3j-008" sceneMemberID="viewController">
+                <tableViewController id="s5q-3j-008" customClass="CommentsViewController" customModule="ProductHunt" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Eeo-eJ-JQP">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
