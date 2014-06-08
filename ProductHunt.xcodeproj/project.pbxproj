@@ -21,8 +21,8 @@
 		28915303194138780033FDD8 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28915302194138780033FDD8 /* FontAwesome.otf */; };
 		28D6165D1941422F002BA319 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6165C1941422F002BA319 /* Comment.swift */; };
 		28D6165F19414375002BA319 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6165E19414375002BA319 /* UIImageViewExtensions.swift */; };
-		28D616611943D95C002BA319 /* comments.json in Resources */ = {isa = PBXBuildFile; fileRef = 28D616601943D95C002BA319 /* comments.json */; };
 		28D616631943E200002BA319 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D616621943E200002BA319 /* CommentsViewController.swift */; };
+		28D616671943E8D3002BA319 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 28D616661943E8D3002BA319 /* data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +54,8 @@
 		28915302194138780033FDD8 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 		28D6165C1941422F002BA319 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		28D6165E19414375002BA319 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
-		28D616601943D95C002BA319 /* comments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = comments.json; sourceTree = "<group>"; };
 		28D616621943E200002BA319 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		28D616661943E8D3002BA319 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 		288B40F2193FF7AE00273522 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				28D616601943D95C002BA319 /* comments.json */,
+				28D616661943E8D3002BA319 /* data */,
 				287773791940EE9C00B93786 /* Montserrat-Bold.ttf */,
 				2877737A1940EE9C00B93786 /* Montserrat-Regular.ttf */,
 				28915302194138780033FDD8 /* FontAwesome.otf */,
@@ -234,8 +234,8 @@
 				28915303194138780033FDD8 /* FontAwesome.otf in Resources */,
 				289152FF1941280E0033FDD8 /* Montserrat-Regular.ttf in Resources */,
 				288B40FC193FF7AE00273522 /* Main.storyboard in Resources */,
+				28D616671943E8D3002BA319 /* data in Resources */,
 				288B40FE193FF7AE00273522 /* Images.xcassets in Resources */,
-				28D616611943D95C002BA319 /* comments.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

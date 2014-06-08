@@ -10,11 +10,7 @@ import UIKit
 
 class CommentsViewController: UITableViewController {
     
-    var comments: Comment[]
-    init(style: UITableViewStyle) {
-        self.comments = Comment.comments()
-        super.init(style: style)
-    }
+    @lazy var comments: Comment[] = Comment.comments()
     
     override func viewDidLoad() {
         super.viewDidLoad()
