@@ -30,10 +30,12 @@ class CommentsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Comment", forIndexPath: indexPath) as CommentsCell
         let comment = comments[indexPath.row]
         
-        cell.textLabel.text = comment.body
+//        cell.nameLabel.text = comment.user_name
+//        cell.headlineLabel.text = comment.user_headline
+        cell.bodyLabel.text = comment.body
         return cell
     }
 

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -71,18 +72,18 @@
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
                         <segue destination="vC3-pB-5Vb" kind="relationship" relationship="detailViewController" id="Tll-UG-LXB"/>
+                        <segue destination="8F5-sA-rhV" kind="relationship" relationship="masterViewController" id="TWw-g3-MDm"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1030.5" y="-322"/>
         </scene>
-        <!--Comments View Controller - Master-->
+        <!--Master View Controller - Master-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="CommentsViewController" customModule="ProductHunt" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="ProductHunt" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,17 +150,61 @@
         <scene sceneID="gb5-fq-khS">
             <objects>
                 <tableViewController id="s5q-3j-008" customClass="CommentsViewController" customModule="ProductHunt" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Eeo-eJ-JQP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="22" sectionFooterHeight="22" id="Eeo-eJ-JQP">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" id="S3c-Vv-KJh">
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Comment" rowHeight="115" id="S3c-Vv-KJh" customClass="CommentsCell" customModule="ProductHunt" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S3c-Vv-KJh" id="2ch-Vg-sdb">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wdC-Wk-AOI" userLabel="Image">
+                                            <rect key="frame" x="10" y="10" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="wdC-Wk-AOI" secondAttribute="height" multiplier="1:1" id="jCu-QP-egn"/>
+                                                <constraint firstAttribute="width" constant="44" id="vth-Te-8EH"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilw-0t-24Z" userLabel="Name">
+                                            <rect key="frame" x="62" y="10" width="92" height="22"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                            <color key="textColor" red="0.85490196080000003" green="0.33333333329999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rie-1f-vXT" userLabel="Headline">
+                                            <rect key="frame" x="162" y="12" width="72" height="20"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body text lolol" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="406" translatesAutoresizingMaskIntoConstraints="NO" id="C4v-eU-8gj" userLabel="Body">
+                                            <rect key="frame" x="62" y="40" width="406" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rie-1f-vXT" firstAttribute="leading" secondItem="Ilw-0t-24Z" secondAttribute="trailing" constant="8" id="GU8-Ro-ity"/>
+                                        <constraint firstItem="wdC-Wk-AOI" firstAttribute="top" secondItem="2ch-Vg-sdb" secondAttribute="top" constant="10" id="HKd-Gk-Zln"/>
+                                        <constraint firstAttribute="centerX" secondItem="rie-1f-vXT" secondAttribute="centerX" constant="42" id="Ldp-Ql-b3u"/>
+                                        <constraint firstItem="Ilw-0t-24Z" firstAttribute="baseline" secondItem="rie-1f-vXT" secondAttribute="baseline" id="LvJ-qU-p1y"/>
+                                        <constraint firstItem="C4v-eU-8gj" firstAttribute="leading" secondItem="wdC-Wk-AOI" secondAttribute="trailing" constant="8" id="Mtg-AW-vI5"/>
+                                        <constraint firstAttribute="trailing" secondItem="C4v-eU-8gj" secondAttribute="trailing" constant="12" id="V44-tH-f4K"/>
+                                        <constraint firstItem="wdC-Wk-AOI" firstAttribute="leading" secondItem="2ch-Vg-sdb" secondAttribute="leading" constant="10" id="VSY-4s-1JA"/>
+                                        <constraint firstItem="C4v-eU-8gj" firstAttribute="top" secondItem="Ilw-0t-24Z" secondAttribute="bottom" constant="8" id="eE8-TG-3oJ"/>
+                                        <constraint firstItem="Ilw-0t-24Z" firstAttribute="top" secondItem="2ch-Vg-sdb" secondAttribute="top" constant="10" id="iui-bn-DuM"/>
+                                        <constraint firstItem="Ilw-0t-24Z" firstAttribute="leading" secondItem="wdC-Wk-AOI" secondAttribute="trailing" constant="8" id="o03-EM-O6P"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarView" destination="wdC-Wk-AOI" id="1Sq-gg-1IQ"/>
+                                    <outlet property="headlineLabel" destination="rie-1f-vXT" id="E8Q-yz-EJX"/>
+                                    <outlet property="nameLabel" destination="Ilw-0t-24Z" id="yAV-sk-x6c"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -171,7 +216,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Kn-lB-sG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2521.5" y="-612"/>
+            <point key="canvasLocation" x="989" y="-1455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3I2-8E-End">
@@ -187,7 +232,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ym-qC-cao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1711.5" y="-612"/>
+            <point key="canvasLocation" x="359" y="-1452"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
@@ -207,6 +252,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6S0-TO-JiA"/>
+        <segue reference="FSq-0Y-22E"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.85490196078431369" green="0.33333333333333331" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
 </document>
