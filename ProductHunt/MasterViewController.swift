@@ -99,8 +99,8 @@ class MasterViewController: UITableViewController, ItemFetcherDelegate {
             ]
             cell.textLabel.attributedText = NSAttributedString(string: item.title, attributes: attrs)
             cell.detailTextLabel.text = item.subtitle
-            var data = NSData(contentsOfURL: item.avatar_url)
-            cell.imageView.image = UIImage(data: data)
+//            var data = NSData(contentsOfURL: item.avatar_url)
+//            cell.imageView.image = UIImage(data: data)
         }
         else {
             cell.textLabel.text = "Loading..."

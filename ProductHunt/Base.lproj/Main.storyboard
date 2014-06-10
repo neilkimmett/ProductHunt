@@ -169,42 +169,44 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilw-0t-24Z" userLabel="Name">
-                                            <rect key="frame" x="62" y="10" width="92" height="22"/>
+                                            <rect key="frame" x="62" y="13" width="92" height="22"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
                                             <color key="textColor" red="0.85490196080000003" green="0.33333333329999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rie-1f-vXT" userLabel="Headline">
-                                            <rect key="frame" x="162" y="12" width="72" height="20"/>
+                                            <rect key="frame" x="162" y="15" width="72" height="20"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body text lolol" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="406" translatesAutoresizingMaskIntoConstraints="NO" id="C4v-eU-8gj" userLabel="Body">
-                                            <rect key="frame" x="62" y="40" width="406" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="406" translatesAutoresizingMaskIntoConstraints="NO" id="C4v-eU-8gj" userLabel="Body">
+                                            <rect key="frame" x="62" y="43" width="406" height="61"/>
+                                            <string key="text">Multiline text label that contains a whole bunch of text and flows over onto multiple lines and ,more text and stuff and things and other stuf etc etc</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="rie-1f-vXT" firstAttribute="leading" secondItem="Ilw-0t-24Z" secondAttribute="trailing" constant="8" id="GU8-Ro-ity"/>
+                                        <constraint firstItem="rie-1f-vXT" firstAttribute="leading" secondItem="2ch-Vg-sdb" secondAttribute="leading" constant="162" id="5IR-NA-xem"/>
+                                        <constraint firstItem="Ilw-0t-24Z" firstAttribute="leading" secondItem="wdC-Wk-AOI" secondAttribute="trailing" constant="8" id="9gN-jy-RWG"/>
+                                        <constraint firstItem="C4v-eU-8gj" firstAttribute="leading" secondItem="wdC-Wk-AOI" secondAttribute="trailing" constant="8" id="BIk-0O-Uvj"/>
                                         <constraint firstItem="wdC-Wk-AOI" firstAttribute="top" secondItem="2ch-Vg-sdb" secondAttribute="top" constant="10" id="HKd-Gk-Zln"/>
-                                        <constraint firstAttribute="centerX" secondItem="rie-1f-vXT" secondAttribute="centerX" constant="42" id="Ldp-Ql-b3u"/>
-                                        <constraint firstItem="Ilw-0t-24Z" firstAttribute="baseline" secondItem="rie-1f-vXT" secondAttribute="baseline" id="LvJ-qU-p1y"/>
-                                        <constraint firstItem="C4v-eU-8gj" firstAttribute="leading" secondItem="wdC-Wk-AOI" secondAttribute="trailing" constant="8" id="Mtg-AW-vI5"/>
-                                        <constraint firstAttribute="trailing" secondItem="C4v-eU-8gj" secondAttribute="trailing" constant="12" id="V44-tH-f4K"/>
+                                        <constraint firstItem="rie-1f-vXT" firstAttribute="leading" secondItem="Ilw-0t-24Z" secondAttribute="trailing" constant="8" symbolic="YES" id="VAf-FH-mnQ"/>
                                         <constraint firstItem="wdC-Wk-AOI" firstAttribute="leading" secondItem="2ch-Vg-sdb" secondAttribute="leading" constant="10" id="VSY-4s-1JA"/>
-                                        <constraint firstAttribute="bottom" secondItem="C4v-eU-8gj" secondAttribute="bottom" constant="53" id="Zhi-fn-8xK"/>
-                                        <constraint firstItem="C4v-eU-8gj" firstAttribute="top" secondItem="Ilw-0t-24Z" secondAttribute="bottom" constant="8" id="eE8-TG-3oJ"/>
-                                        <constraint firstItem="Ilw-0t-24Z" firstAttribute="top" secondItem="2ch-Vg-sdb" secondAttribute="top" constant="10" id="iui-bn-DuM"/>
-                                        <constraint firstItem="Ilw-0t-24Z" firstAttribute="leading" secondItem="wdC-Wk-AOI" secondAttribute="trailing" constant="8" id="o03-EM-O6P"/>
+                                        <constraint firstAttribute="trailing" secondItem="C4v-eU-8gj" secondAttribute="trailing" constant="12" id="VYK-Mb-8YP"/>
+                                        <constraint firstItem="Ilw-0t-24Z" firstAttribute="top" secondItem="2ch-Vg-sdb" secondAttribute="top" constant="13" id="ZYb-bm-yEc"/>
+                                        <constraint firstItem="rie-1f-vXT" firstAttribute="top" secondItem="2ch-Vg-sdb" secondAttribute="top" constant="15" id="luQ-k2-xRr"/>
+                                        <constraint firstItem="C4v-eU-8gj" firstAttribute="top" secondItem="Ilw-0t-24Z" secondAttribute="bottom" constant="8" id="m2M-gL-fbI"/>
+                                        <constraint firstAttribute="bottom" secondItem="C4v-eU-8gj" secondAttribute="bottom" constant="10" id="rTy-8e-yYj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="avatarView" destination="wdC-Wk-AOI" id="1Sq-gg-1IQ"/>
-                                    <outlet property="headlineLabel" destination="rie-1f-vXT" id="E8Q-yz-EJX"/>
-                                    <outlet property="nameLabel" destination="Ilw-0t-24Z" id="yAV-sk-x6c"/>
+                                    <outlet property="avatarView" destination="wdC-Wk-AOI" id="sqF-Wn-fDQ"/>
+                                    <outlet property="bodyLabel" destination="C4v-eU-8gj" id="nWC-fu-kQ2"/>
+                                    <outlet property="headlineLabel" destination="rie-1f-vXT" id="xOL-9y-8Xp"/>
+                                    <outlet property="nameLabel" destination="Ilw-0t-24Z" id="ew8-Q7-avC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -217,7 +219,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Kn-lB-sG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989" y="-1455"/>
+            <point key="canvasLocation" x="989" y="-1420"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3I2-8E-End">
@@ -252,7 +254,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tll-UG-LXB"/>
+        <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.85490196078431369" green="0.33333333333333331" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
 </document>

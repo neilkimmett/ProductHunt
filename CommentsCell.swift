@@ -9,8 +9,8 @@
 import UIKit
 
 class CommentsCell: UITableViewCell {
-//    @IBOutlet var avatarView : UIImageView
-//    @IBOutlet var nameLabel : UILabel
-//    @IBOutlet var headlineLabel : UILabel
+    @IBOutlet var avatarView : UIImageView
+    @IBOutlet var nameLabel : UILabel
+    @IBOutlet var headlineLabel : UILabel
     @IBOutlet var bodyLabel : UILabel
 }
