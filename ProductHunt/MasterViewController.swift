@@ -26,7 +26,8 @@ class MasterViewController: UITableViewController, ItemFetcherDelegate {
         super.viewDidLoad()
         
         self.fetcher = ItemFetcher(delegate: self)
-        self.fetcher?.fetch()
+//        self.fetcher?.fetch()
+        self.fetcher?.loadFromDisk()
 
         if let split = self.splitViewController {
             let controllers = split.viewControllers

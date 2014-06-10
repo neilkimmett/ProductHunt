@@ -73,7 +73,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <segue destination="vC3-pB-5Vb" kind="relationship" relationship="detailViewController" id="Tll-UG-LXB"/>
-                        <segue destination="8F5-sA-rhV" kind="relationship" relationship="masterViewController" id="TWw-g3-MDm"/>
+                        <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="3Cy-Ml-eR8"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
@@ -195,6 +195,7 @@
                                         <constraint firstItem="C4v-eU-8gj" firstAttribute="leading" secondItem="wdC-Wk-AOI" secondAttribute="trailing" constant="8" id="Mtg-AW-vI5"/>
                                         <constraint firstAttribute="trailing" secondItem="C4v-eU-8gj" secondAttribute="trailing" constant="12" id="V44-tH-f4K"/>
                                         <constraint firstItem="wdC-Wk-AOI" firstAttribute="leading" secondItem="2ch-Vg-sdb" secondAttribute="leading" constant="10" id="VSY-4s-1JA"/>
+                                        <constraint firstAttribute="bottom" secondItem="C4v-eU-8gj" secondAttribute="bottom" constant="53" id="Zhi-fn-8xK"/>
                                         <constraint firstItem="C4v-eU-8gj" firstAttribute="top" secondItem="Ilw-0t-24Z" secondAttribute="bottom" constant="8" id="eE8-TG-3oJ"/>
                                         <constraint firstItem="Ilw-0t-24Z" firstAttribute="top" secondItem="2ch-Vg-sdb" secondAttribute="top" constant="10" id="iui-bn-DuM"/>
                                         <constraint firstItem="Ilw-0t-24Z" firstAttribute="leading" secondItem="wdC-Wk-AOI" secondAttribute="trailing" constant="8" id="o03-EM-O6P"/>
@@ -251,8 +252,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
-        <segue reference="FSq-0Y-22E"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.85490196078431369" green="0.33333333333333331" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
 </document>

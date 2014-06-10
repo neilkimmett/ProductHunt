@@ -19,6 +19,7 @@
 		289152FF1941280E0033FDD8 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2877737A1940EE9C00B93786 /* Montserrat-Regular.ttf */; };
 		28915301194130270033FDD8 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28915300194130270033FDD8 /* UIColorExtensions.swift */; };
 		28915303194138780033FDD8 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28915302194138780033FDD8 /* FontAwesome.otf */; };
+		28A2486219475A8D00F05280 /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 28A2486119475A8D00F05280 /* posts.json */; };
 		28D6165D1941422F002BA319 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6165C1941422F002BA319 /* Comment.swift */; };
 		28D6165F19414375002BA319 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6165E19414375002BA319 /* UIImageViewExtensions.swift */; };
 		28D616631943E200002BA319 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D616621943E200002BA319 /* CommentsViewController.swift */; };
@@ -53,6 +54,7 @@
 		288B4115193FF88200273522 /* ItemFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemFetcher.swift; sourceTree = "<group>"; };
 		28915300194130270033FDD8 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		28915302194138780033FDD8 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		28A2486119475A8D00F05280 /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
 		28D6165C1941422F002BA319 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		28D6165E19414375002BA319 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		28D616621943E200002BA319 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				28D616661943E8D3002BA319 /* data */,
 				287773791940EE9C00B93786 /* Montserrat-Bold.ttf */,
+				28A2486119475A8D00F05280 /* posts.json */,
 				2877737A1940EE9C00B93786 /* Montserrat-Regular.ttf */,
 				28915302194138780033FDD8 /* FontAwesome.otf */,
 				288B40F3193FF7AE00273522 /* Info.plist */,
@@ -236,6 +239,7 @@
 				289152FE1941280E0033FDD8 /* Montserrat-Bold.ttf in Resources */,
 				28915303194138780033FDD8 /* FontAwesome.otf in Resources */,
 				289152FF1941280E0033FDD8 /* Montserrat-Regular.ttf in Resources */,
+				28A2486219475A8D00F05280 /* posts.json in Resources */,
 				288B40FC193FF7AE00273522 /* Main.storyboard in Resources */,
 				28D616671943E8D3002BA319 /* data in Resources */,
 				288B40FE193FF7AE00273522 /* Images.xcassets in Resources */,

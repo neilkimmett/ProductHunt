@@ -16,7 +16,7 @@ class CommentsViewController: UITableViewController {
         super.viewDidLoad()
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 44
     }
     
     // #pragma mark - Table View

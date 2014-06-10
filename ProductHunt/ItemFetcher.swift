@@ -28,21 +28,30 @@ class ItemFetcher {
         let task = session.dataTaskWithURL(NSURL(string: url), completionHandler: { (data, response, error) in
             
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-            
-            var json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(), error: nil) as NSDictionary
-//            var json = [["title": "HookFeed", "subtitle": "Customer Analytics for Stripe", "url": "http://www.producthunt.com/l/50bd8456b2"]]
-            if let itemsJSON = json["results"]?["items"] as? NSDictionary[] {
-                let items = itemsJSON.map { (itemJSON: NSDictionary) -> Item in
-                    let url = itemJSON["title"]?["href"] as String
-                    let title = itemJSON["title"]?["text"] as String
-                    let subtitle = itemJSON["subtitle"] as String
-                    let avatar_url = itemJSON["avatar_url"]?["src"] as String
-                    return Item(url: url, title: title, subtitle: subtitle, avatar_url: NSURL(string: avatar_url))
-                }
-                self.delegate?.itemFetcherDidFetchItems(items)
-            }
+            self.parseFromData(data)
         })
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         task.resume()
+    }
+    
+    func loadFromDisk() {
+        let path = NSBundle.mainBundle().pathForResource("posts", ofType: "json")
+        let data = NSData.dataWithContentsOfFile(path, options: NSDataReadingOptions.DataReadingUncached, error: nil)
+        self.parseFromData(data)
+    }
+    
+    func parseFromData(data: NSData) {
+        var json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(), error: nil) as NSDictionary
+
+        if let itemsJSON = json["results"]?["items"] as? NSDictionary[] {
+            let items = itemsJSON.map { (itemJSON: NSDictionary) -> Item in
+                let url = itemJSON["title"]?["href"] as String
+                let title = itemJSON["title"]?["text"] as String
+                let subtitle = itemJSON["subtitle"] as String
+                let avatar_url = itemJSON["avatar_url"]?["src"] as String
+                return Item(url: url, title: title, subtitle: subtitle, avatar_url: NSURL(string: avatar_url))
+            }
+            self.delegate?.itemFetcherDidFetchItems(items)
+        }
     }
 }
