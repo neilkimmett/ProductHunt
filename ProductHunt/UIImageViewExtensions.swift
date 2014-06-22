@@ -20,7 +20,10 @@ extension UIImageView {
             let session = NSURLSession(configuration: config)
             let task = session.dataTaskWithURL(NSURL(string: urlString)) { (data, response, error) in
                 let image = UIImage(data: data)
-                self.image = image
+                dispatch_main_queue {
+                    self.image = image
+                    self.setNeedsDisplay()
+                }
                 imageCache[urlString] = image
             }
             task.resume()

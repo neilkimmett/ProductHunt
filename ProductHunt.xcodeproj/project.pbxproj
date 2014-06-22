@@ -27,6 +27,7 @@
 		28D616691943F0BE002BA319 /* CommentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D616681943F0BE002BA319 /* CommentsCell.swift */; };
 		28F4913B1956F828005CC77C /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4913A1956F828005CC77C /* AutoTextView.swift */; };
 		28F4913D19570986005CC77C /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4913C19570986005CC77C /* UIImageViewExtensions.swift */; };
+		28F4913F195788A5005CC77C /* GCDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4913E195788A5005CC77C /* GCDExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		28D616681943F0BE002BA319 /* CommentsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsCell.swift; sourceTree = "<group>"; };
 		28F4913A1956F828005CC77C /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
 		28F4913C19570986005CC77C /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		28F4913E195788A5005CC77C /* GCDExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				2898DA9C195649E500348683 /* ProductHuntClient.swift */,
 				28F4913A1956F828005CC77C /* AutoTextView.swift */,
 				28F4913C19570986005CC77C /* UIImageViewExtensions.swift */,
+				28F4913E195788A5005CC77C /* GCDExtensions.swift */,
 			);
 			path = ProductHunt;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				288B4114193FF7E300273522 /* Item.swift in Sources */,
+				28F4913F195788A5005CC77C /* GCDExtensions.swift in Sources */,
 				28D616691943F0BE002BA319 /* CommentsCell.swift in Sources */,
 				2898DA9D195649E500348683 /* ProductHuntClient.swift in Sources */,
 				288B40F9193FF7AE00273522 /* DetailViewController.swift in Sources */,

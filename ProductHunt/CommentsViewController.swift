@@ -43,7 +43,7 @@ class CommentsViewController: UITableViewController, ProductHuntClientCommentsDe
         let cell = tableView.dequeueReusableCellWithIdentifier("Comment", forIndexPath: indexPath) as CommentsCell
         cell.selectionStyle = .None
         
-        dispatch_async(dispatch_get_main_queue()) {
+        dispatch_main_queue {
             cell.bodyTextView.textContainer.heightTracksTextView = true
             if let comment = self.comments?[indexPath.row] {
                 cell.nameLabel.text = comment.user.name

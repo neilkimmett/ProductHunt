@@ -59,8 +59,8 @@ class ProductHuntClient {
         let items = hunts.map { (itemJSON: NSDictionary) -> Item in
             println(itemJSON["url"]!)
             let url = String(itemJSON["url"]! as NSString)
-//            let permalink = String(itemJSON["permalink"]! as NSString)
-            let permalink = "posts/mergerize"
+            let permalink = String(itemJSON["permalink"]! as NSString)
+//            let permalink = "posts/mergerize"
             let comment_count = itemJSON["comment_count"].integerValue
             let rank = Int(itemJSON["rank"]! as NSNumber)
             let votes = Int(itemJSON["votes"]! as NSNumber)
@@ -72,7 +72,10 @@ class ProductHuntClient {
             
             return Item(url: url, permalink: permalink, comment_count: comment_count, rank: rank, votes: votes, title: title, tagline: tagline, user: user)
         }
-        self.delegate?.productHuntClientDidFetchItems(items)
+        dispatch_main_queue {
+            println(items)
+            self.delegate?.productHuntClientDidFetchItems(items)
+        }
     }
     
     func parseUserFromDict(dict: NSDictionary) -> User {
@@ -94,6 +97,9 @@ class ProductHuntClient {
             let user = self.parseUserFromDict(commentJSON["user"] as NSDictionary)
             return Comment(index: index, comment: comment, comment_html: comment_html, user: user, timestamp: timestamp)
         }
-        self.commentsDelegate?.productHuntClientDidFetchComments(comments)
+        dispatch_main_queue {
+            println(comments)
+            self.commentsDelegate?.productHuntClientDidFetchComments(comments)
+        }
     }
 }
