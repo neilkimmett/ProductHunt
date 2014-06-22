@@ -50,6 +50,12 @@ class MasterViewController: UITableViewController, ProductHuntClientDelegate {
                 if let cell = sender?.superview?.superview? as? UITableViewCell {
                     
                     let indexPath = self.tableView.indexPathForCell(cell)
+                    if let item = self.items?[indexPath.row] {
+                        let nav = segue.destinationViewController as UINavigationController
+                        let detail = nav.topViewController as CommentsViewController
+                        detail.item = item
+                    }
+
                     self.tableView.selectRowAtIndexPath(indexPath, animated: false, scrollPosition: .None)
                 }
             default:

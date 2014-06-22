@@ -8,13 +8,18 @@
 
 import UIKit
 
-class CommentsViewController: UITableViewController {
-    
-    let comments: Comment[] = Comment.comments()
+class CommentsViewController: UITableViewController, ProductHuntClientCommentsDelegate {
+    var item: Item? = nil
+    var comments: Comment[]? = nil
+    let apiClient = ProductHuntClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let i = self.item {
+            self.apiClient.commentsDelegate = self
+            self.apiClient.fetchCommentsForItem(i)
+        }
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44
     }
@@ -26,17 +31,31 @@ class CommentsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return comments.count
+        if let comments = self.comments {
+            return comments.count
+        }
+        else {
+            return 1
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Comment", forIndexPath: indexPath) as CommentsCell
-        let comment = comments[indexPath.row]
-        cell.nameLabel.text = comment.user_name
-        cell.headlineLabel.text = comment.user_headline
-        cell.bodyLabel.text = comment.body
+        
+        if let comment = comments?[indexPath.row] {
+            cell.nameLabel.text = comment.user.name
+            cell.headlineLabel.text = comment.user.username
+            cell.bodyLabel.text = comment.comment
+        }
+        else {
+            cell.textLabel.text = "Loading..."
+        }
         return cell
     }
-
+    
+    func productHuntClientDidFetchComments(comments: Comment[]) {
+        self.comments = comments
+        self.tableView.reloadData()
+    }
 }
 
