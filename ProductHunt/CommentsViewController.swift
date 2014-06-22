@@ -44,15 +44,20 @@ class CommentsViewController: UITableViewController, ProductHuntClientCommentsDe
         cell.selectionStyle = .None
         
         dispatch_async(dispatch_get_main_queue()) {
+            cell.bodyTextView.textContainer.heightTracksTextView = true
             if let comment = self.comments?[indexPath.row] {
                 cell.nameLabel.text = comment.user.name
-                cell.headlineLabel.text = comment.user.username
+                cell.headlineLabel.text = "@\(comment.user.username)"
                 cell.bodyTextView.attributedText = comment.attributedComment
+                cell.avatarView.loadImageFromURL("http://twitter.com/api/users/profile_image/\(comment.user.username)")
+                cell.avatarView.layer.cornerRadius = cell.avatarView.bounds.size.height / 2.0
+                cell.avatarView.layer.masksToBounds = true
             }
             else {
                 cell.bodyTextView.text = "Loading..."
-                cell.nameLabel.text = nil;
-                cell.headlineLabel.text = nil;
+                cell.nameLabel.text = nil
+                cell.headlineLabel.text = nil
+                cell.avatarView.image = nil
             }
         }
         return cell

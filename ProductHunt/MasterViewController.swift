@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Neil Kimmett. All rights reserved.
 //
 
+import QuartzCore
 import UIKit
 
 class MasterViewController: UITableViewController, ProductHuntClientDelegate {
@@ -91,8 +92,9 @@ class MasterViewController: UITableViewController, ProductHuntClientDelegate {
             ]
             cell.textLabel.attributedText = NSAttributedString(string: item.title, attributes: attrs)
             cell.detailTextLabel.text = item.tagline
-//            var data = NSData(contentsOfURL: item.avatar_url)
-//            cell.imageView.image = UIImage(data: data)
+            cell.imageView.loadImageFromURL("http://twitter.com/api/users/profile_image/\(item.user.username)")
+            cell.imageView.layer.cornerRadius = cell.imageView.bounds.size.height / 2.0
+            cell.imageView.layer.masksToBounds = true
         }
         else {
             cell.textLabel.text = "Loading..."
