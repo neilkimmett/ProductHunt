@@ -19,12 +19,22 @@ protocol ProductHuntClientCommentsDelegate {
 class ProductHuntClient {
     let baseURL = NSURL(string: "http://hook-api.herokuapp.com")
     let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-    let session = NSURLSession.sharedSession()
+    var session : NSURLSession
     var delegate: ProductHuntClientDelegate? = nil
     var commentsDelegate: ProductHuntClientCommentsDelegate? = nil
     
+    init () {
+        config.HTTPAdditionalHeaders = [
+            "Content-Type": "application/json"
+        ]
+        self.session = NSURLSession(configuration: self.config)
+    }
+    
     func get(url: NSURL, completion: (NSData) -> ()) {
         let task = session.dataTaskWithURL(url, completionHandler: { (data, response, error) in
+            if let resp = response as? NSHTTPURLResponse {
+                println("Response from \(url) with status code \(resp.statusCode)")
+            }
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
             completion(data)
             })

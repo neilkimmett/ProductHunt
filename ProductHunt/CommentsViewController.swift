@@ -48,12 +48,15 @@ class CommentsViewController: UITableViewController, ProductHuntClientCommentsDe
             cell.bodyLabel.text = comment.comment
         }
         else {
-            cell.textLabel.text = "Loading..."
+            cell.bodyLabel.text = "Loading..."
+            cell.nameLabel.text = nil;
+            cell.headlineLabel.text = nil;
         }
         return cell
     }
     
     func productHuntClientDidFetchComments(comments: Comment[]) {
+        println("Did fetch comments \(comments)")
         self.comments = comments
         self.tableView.reloadData()
     }
