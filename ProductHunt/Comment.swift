@@ -16,7 +16,8 @@ struct Comment {
     let timestamp: String
     
     var attributedComment: NSAttributedString {
-        let attrComment = NSMutableAttributedString(string: self.comment)
+        let font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        let attrComment = NSMutableAttributedString(string: self.comment, attributes:[NSFontAttributeName : font])
         let string: NSString = self.comment
         let regex = NSRegularExpression(pattern: "@(\\w+)", options: NSRegularExpressionOptions(), error: nil)
         let range = NSMakeRange(0, self.comment.utf16count)

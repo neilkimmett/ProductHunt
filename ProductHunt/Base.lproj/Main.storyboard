@@ -162,7 +162,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wdC-Wk-AOI" userLabel="Image">
-                                            <rect key="frame" x="10" y="10" width="44" height="44"/>
+                                            <rect key="frame" x="10" y="10.5" width="44" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="wdC-Wk-AOI" secondAttribute="height" multiplier="1:1" id="jCu-QP-egn"/>
                                                 <constraint firstAttribute="width" constant="44" id="vth-Te-8EH"/>
@@ -174,38 +174,38 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="245" verticalHuggingPriority="251" horizontalCompressionResistancePriority="767" verticalCompressionResistancePriority="751" text="Full Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilw-0t-24Z" userLabel="Name">
-                                            <rect key="frame" x="62" y="13" width="92" height="22"/>
+                                            <rect key="frame" x="62" y="13.5" width="92" height="22"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
                                             <color key="textColor" red="0.85490196080000003" green="0.33333333329999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="257" verticalHuggingPriority="251" horizontalCompressionResistancePriority="744" text="Headline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rie-1f-vXT" userLabel="Headline">
-                                            <rect key="frame" x="162" y="15" width="72" height="20"/>
+                                            <rect key="frame" x="162" y="15.5" width="72" height="20"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcL-lk-e2T">
-                                            <rect key="frame" x="62" y="43" width="398" height="183.5"/>
+                                            <rect key="frame" x="58" y="35.5" width="402" height="193"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                         </textView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="rie-1f-vXT" firstAttribute="leading" secondItem="2ch-Vg-sdb" secondAttribute="leading" constant="162" id="5IR-NA-xem"/>
-                                        <constraint firstAttribute="bottom" secondItem="IcL-lk-e2T" secondAttribute="bottom" constant="2" id="7n3-4g-F0t"/>
-                                        <constraint firstItem="IcL-lk-e2T" firstAttribute="leading" secondItem="2ch-Vg-sdb" secondAttribute="leading" constant="62" id="8Di-nN-Uzj"/>
+                                        <constraint firstAttribute="bottom" secondItem="IcL-lk-e2T" secondAttribute="bottom" id="7n3-4g-F0t"/>
+                                        <constraint firstItem="IcL-lk-e2T" firstAttribute="leading" secondItem="2ch-Vg-sdb" secondAttribute="leading" constant="58" id="8Di-nN-Uzj"/>
                                         <constraint firstItem="Ilw-0t-24Z" firstAttribute="leading" secondItem="wdC-Wk-AOI" secondAttribute="trailing" constant="8" id="9gN-jy-RWG"/>
                                         <constraint firstItem="wdC-Wk-AOI" firstAttribute="top" secondItem="2ch-Vg-sdb" secondAttribute="top" constant="10" id="HKd-Gk-Zln"/>
                                         <constraint firstItem="rie-1f-vXT" firstAttribute="leading" secondItem="Ilw-0t-24Z" secondAttribute="trailing" constant="8" symbolic="YES" id="VAf-FH-mnQ"/>
                                         <constraint firstItem="wdC-Wk-AOI" firstAttribute="leading" secondItem="2ch-Vg-sdb" secondAttribute="leading" constant="10" id="VSY-4s-1JA"/>
                                         <constraint firstItem="Ilw-0t-24Z" firstAttribute="top" secondItem="2ch-Vg-sdb" secondAttribute="top" constant="13" id="ZYb-bm-yEc"/>
-                                        <constraint firstAttribute="trailing" secondItem="IcL-lk-e2T" secondAttribute="trailing" constant="20" id="aCc-gi-90D"/>
+                                        <constraint firstAttribute="trailing" secondItem="IcL-lk-e2T" secondAttribute="trailing" constant="20" symbolic="YES" id="aCc-gi-90D"/>
                                         <constraint firstItem="rie-1f-vXT" firstAttribute="top" secondItem="2ch-Vg-sdb" secondAttribute="top" constant="15" id="luQ-k2-xRr"/>
-                                        <constraint firstItem="IcL-lk-e2T" firstAttribute="top" secondItem="Ilw-0t-24Z" secondAttribute="bottom" constant="8" id="qjv-7Y-prh"/>
+                                        <constraint firstItem="IcL-lk-e2T" firstAttribute="top" secondItem="Ilw-0t-24Z" secondAttribute="bottom" id="qjv-7Y-prh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
