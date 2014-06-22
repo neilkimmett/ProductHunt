@@ -16,6 +16,7 @@ extension UIImageView {
             self.image = image
         }
         else {
+            self.image = UIImage(named: "avatar-placeholder")
             let config = NSURLSessionConfiguration.defaultSessionConfiguration()
             let session = NSURLSession(configuration: config)
             let task = session.dataTaskWithURL(NSURL(string: urlString)) { (data, response, error) in

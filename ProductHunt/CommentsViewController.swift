@@ -22,6 +22,8 @@ class CommentsViewController: UITableViewController, ProductHuntClientCommentsDe
         }
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44
+        
+        self.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem()
     }
     
     // #pragma mark - Table View

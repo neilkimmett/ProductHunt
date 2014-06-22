@@ -93,7 +93,7 @@ class MasterViewController: UITableViewController, ProductHuntClientDelegate {
             cell.textLabel.attributedText = NSAttributedString(string: item.title, attributes: attrs)
             cell.detailTextLabel.text = item.tagline
             cell.imageView.loadImageFromURL("http://twitter.com/api/users/profile_image/\(item.user.username)")
-            cell.imageView.layer.cornerRadius = cell.imageView.bounds.size.height / 2.0
+            cell.imageView.layer.cornerRadius = 22
             cell.imageView.layer.masksToBounds = true
         }
         else {
