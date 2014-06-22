@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let font = UIFont(name:"Montserrat-Bold", size: 16)
         let attrs = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor()]
         UINavigationBar.appearance().titleTextAttributes = attrs
-        UINavigationBar.appearance().barTintColor = UIColor(r: 218.0, g: 85.0, b: 47.0)
+        UINavigationBar.appearance().barTintColor = UIColor.huntColor()
         UIBarButtonItem.appearance().setTitleTextAttributes(attrs, forState: .Normal)
         return true
     }

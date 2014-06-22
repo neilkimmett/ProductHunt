@@ -150,13 +150,13 @@
         <scene sceneID="gb5-fq-khS">
             <objects>
                 <tableViewController id="s5q-3j-008" customClass="CommentsViewController" customModule="ProductHunt" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="22" sectionFooterHeight="22" id="Eeo-eJ-JQP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="228" sectionHeaderHeight="22" sectionFooterHeight="22" id="Eeo-eJ-JQP">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Comment" rowHeight="115" id="S3c-Vv-KJh" customClass="CommentsCell" customModule="ProductHunt" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Comment" rowHeight="228" id="S3c-Vv-KJh" customClass="CommentsCell" customModule="ProductHunt" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S3c-Vv-KJh" id="2ch-Vg-sdb">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -168,7 +168,7 @@
                                                 <constraint firstAttribute="width" constant="44" id="vth-Te-8EH"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilw-0t-24Z" userLabel="Name">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Full Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilw-0t-24Z" userLabel="Name">
                                             <rect key="frame" x="62" y="13" width="92" height="22"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
                                             <color key="textColor" red="0.85490196080000003" green="0.33333333329999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
@@ -180,31 +180,32 @@
                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="406" translatesAutoresizingMaskIntoConstraints="NO" id="C4v-eU-8gj" userLabel="Body">
-                                            <rect key="frame" x="62" y="43" width="406" height="61"/>
-                                            <string key="text">Multiline text label that contains a whole bunch of text and flows over onto multiple lines and ,more text and stuff and things and other stuf etc etc</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcL-lk-e2T">
+                                            <rect key="frame" x="62" y="43" width="398" height="183.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                        </textView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="rie-1f-vXT" firstAttribute="leading" secondItem="2ch-Vg-sdb" secondAttribute="leading" constant="162" id="5IR-NA-xem"/>
+                                        <constraint firstAttribute="bottom" secondItem="IcL-lk-e2T" secondAttribute="bottom" constant="2" id="7n3-4g-F0t"/>
+                                        <constraint firstItem="IcL-lk-e2T" firstAttribute="leading" secondItem="2ch-Vg-sdb" secondAttribute="leading" constant="62" id="8Di-nN-Uzj"/>
                                         <constraint firstItem="Ilw-0t-24Z" firstAttribute="leading" secondItem="wdC-Wk-AOI" secondAttribute="trailing" constant="8" id="9gN-jy-RWG"/>
-                                        <constraint firstItem="C4v-eU-8gj" firstAttribute="leading" secondItem="wdC-Wk-AOI" secondAttribute="trailing" constant="8" id="BIk-0O-Uvj"/>
                                         <constraint firstItem="wdC-Wk-AOI" firstAttribute="top" secondItem="2ch-Vg-sdb" secondAttribute="top" constant="10" id="HKd-Gk-Zln"/>
                                         <constraint firstItem="rie-1f-vXT" firstAttribute="leading" secondItem="Ilw-0t-24Z" secondAttribute="trailing" constant="8" symbolic="YES" id="VAf-FH-mnQ"/>
                                         <constraint firstItem="wdC-Wk-AOI" firstAttribute="leading" secondItem="2ch-Vg-sdb" secondAttribute="leading" constant="10" id="VSY-4s-1JA"/>
-                                        <constraint firstAttribute="trailing" secondItem="C4v-eU-8gj" secondAttribute="trailing" constant="12" id="VYK-Mb-8YP"/>
                                         <constraint firstItem="Ilw-0t-24Z" firstAttribute="top" secondItem="2ch-Vg-sdb" secondAttribute="top" constant="13" id="ZYb-bm-yEc"/>
+                                        <constraint firstAttribute="trailing" secondItem="IcL-lk-e2T" secondAttribute="trailing" constant="20" id="aCc-gi-90D"/>
                                         <constraint firstItem="rie-1f-vXT" firstAttribute="top" secondItem="2ch-Vg-sdb" secondAttribute="top" constant="15" id="luQ-k2-xRr"/>
-                                        <constraint firstItem="C4v-eU-8gj" firstAttribute="top" secondItem="Ilw-0t-24Z" secondAttribute="bottom" constant="8" id="m2M-gL-fbI"/>
-                                        <constraint firstAttribute="bottom" secondItem="C4v-eU-8gj" secondAttribute="bottom" constant="10" id="rTy-8e-yYj"/>
+                                        <constraint firstItem="IcL-lk-e2T" firstAttribute="top" secondItem="Ilw-0t-24Z" secondAttribute="bottom" constant="8" id="qjv-7Y-prh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="avatarView" destination="wdC-Wk-AOI" id="sqF-Wn-fDQ"/>
-                                    <outlet property="bodyLabel" destination="C4v-eU-8gj" id="nWC-fu-kQ2"/>
+                                    <outlet property="bodyTextView" destination="IcL-lk-e2T" id="Pst-Mb-WNB"/>
                                     <outlet property="headlineLabel" destination="rie-1f-vXT" id="xOL-9y-8Xp"/>
                                     <outlet property="nameLabel" destination="Ilw-0t-24Z" id="ew8-Q7-avC"/>
                                 </connections>

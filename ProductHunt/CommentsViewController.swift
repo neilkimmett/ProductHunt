@@ -41,16 +41,19 @@ class CommentsViewController: UITableViewController, ProductHuntClientCommentsDe
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Comment", forIndexPath: indexPath) as CommentsCell
+        cell.selectionStyle = .None
         
-        if let comment = comments?[indexPath.row] {
-            cell.nameLabel.text = comment.user.name
-            cell.headlineLabel.text = comment.user.username
-            cell.bodyLabel.text = comment.comment
-        }
-        else {
-            cell.bodyLabel.text = "Loading..."
-            cell.nameLabel.text = nil;
-            cell.headlineLabel.text = nil;
+        dispatch_async(dispatch_get_main_queue()) {
+            if let comment = self.comments?[indexPath.row] {
+                cell.nameLabel.text = comment.user.name
+                cell.headlineLabel.text = comment.user.username
+                cell.bodyTextView.attributedText = comment.attributedComment
+            }
+            else {
+                cell.bodyTextView.text = "Loading..."
+                cell.nameLabel.text = nil;
+                cell.headlineLabel.text = nil;
+            }
         }
         return cell
     }

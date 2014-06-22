@@ -59,8 +59,8 @@ class ProductHuntClient {
         let items = hunts.map { (itemJSON: NSDictionary) -> Item in
             println(itemJSON["url"]!)
             let url = String(itemJSON["url"]! as NSString)
-            let permalink = String(itemJSON["permalink"]! as NSString)
-            
+//            let permalink = String(itemJSON["permalink"]! as NSString)
+            let permalink = "posts/mergerize"
             let comment_count = itemJSON["comment_count"].integerValue
             let rank = Int(itemJSON["rank"]! as NSNumber)
             let votes = Int(itemJSON["votes"]! as NSNumber)
@@ -87,7 +87,8 @@ class ProductHuntClient {
         let commentsJSON = json["comments"]! as NSDictionary[]
         let comments = commentsJSON.map { (commentJSON: NSDictionary) -> Comment in
             let comment_html = String(commentJSON["comment_html"]! as NSString)
-            let comment = String(commentJSON["comment"]! as NSString)
+            let nsComment = commentJSON["comment"]! as NSString
+            let comment = String(nsComment.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
             let timestamp = String(commentJSON["timestamp"] as NSString)
             let index = Int(commentJSON["index"]! as NSNumber)
             let user = self.parseUserFromDict(commentJSON["user"] as NSDictionary)
