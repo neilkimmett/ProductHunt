@@ -10,7 +10,11 @@ import Foundation
 
 struct Item {
     let url : String
+    let permalink: String
+    let comment_count : Int
+    let rank : Int
+    let votes : Int
     let title : String
-    let subtitle : String
-    let avatar_url: NSURL
+    let tagline : String
+    let user : User
 }

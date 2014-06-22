@@ -8,11 +8,11 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController, ItemFetcherDelegate {
+class MasterViewController: UITableViewController, ProductHuntClientDelegate {
 
     var detailViewController: DetailViewController? = nil
-    var fetcher: ItemFetcher?
     var items: Item[]?
+    let apiClient = ProductHuntClient()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,28 +25,14 @@ class MasterViewController: UITableViewController, ItemFetcherDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.fetcher = ItemFetcher(delegate: self)
-//        self.fetcher?.fetch()
-        self.fetcher?.loadFromDisk()
+        self.apiClient.delegate = self
+        self.apiClient.fetchItems()
 
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.endIndex-1].topViewController as? DetailViewController
             split.preferredDisplayMode = .AllVisible
-//            let openButton = UIBarButtonItem(title: "Posts", style: .Plain, target: self.splitViewController, action: "showViewController")
-//            navigationItem.leftBarButtonItem = openButton
         }
-    }
-    
-    func itemFetcherDidFetchItems(items : Item[]) {
-        self.items = items
-        self.tableView.reloadData()
-    }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // #pragma mark - Segues
@@ -98,7 +84,7 @@ class MasterViewController: UITableViewController, ItemFetcherDelegate {
                 NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleSingle.toRaw()
             ]
             cell.textLabel.attributedText = NSAttributedString(string: item.title, attributes: attrs)
-            cell.detailTextLabel.text = item.subtitle
+            cell.detailTextLabel.text = item.tagline
 //            var data = NSData(contentsOfURL: item.avatar_url)
 //            cell.imageView.image = UIImage(data: data)
         }
@@ -117,6 +103,13 @@ class MasterViewController: UITableViewController, ItemFetcherDelegate {
         }
     }
 
+    // #pragma mark - ProductHuntClientDelegate
+
+    func productHuntClientDidFetchItems(items: Item[]) {
+        self.items = items
+        println(items)
+        self.tableView.reloadData()
+    }
 
 }
 
