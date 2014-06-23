@@ -28,6 +28,7 @@
 		28F4913B1956F828005CC77C /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4913A1956F828005CC77C /* AutoTextView.swift */; };
 		28F4913D19570986005CC77C /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4913C19570986005CC77C /* UIImageViewExtensions.swift */; };
 		28F4913F195788A5005CC77C /* GCDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4913E195788A5005CC77C /* GCDExtensions.swift */; };
+		28F491411957966B005CC77C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F491401957966B005CC77C /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		28F4913A1956F828005CC77C /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
 		28F4913C19570986005CC77C /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		28F4913E195788A5005CC77C /* GCDExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDExtensions.swift; sourceTree = "<group>"; };
+		28F491401957966B005CC77C /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				28F4913A1956F828005CC77C /* AutoTextView.swift */,
 				28F4913C19570986005CC77C /* UIImageViewExtensions.swift */,
 				28F4913E195788A5005CC77C /* GCDExtensions.swift */,
+				28F491401957966B005CC77C /* PostCell.swift */,
 			);
 			path = ProductHunt;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				288B40F9193FF7AE00273522 /* DetailViewController.swift in Sources */,
 				28D6165D1941422F002BA319 /* Comment.swift in Sources */,
 				28F4913D19570986005CC77C /* UIImageViewExtensions.swift in Sources */,
+				28F491411957966B005CC77C /* PostCell.swift in Sources */,
 				28F4913B1956F828005CC77C /* AutoTextView.swift in Sources */,
 				28915301194130270033FDD8 /* UIColorExtensions.swift in Sources */,
 				2898DA9F19564D3F00348683 /* User.swift in Sources */,
