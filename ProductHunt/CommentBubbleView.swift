@@ -24,10 +24,14 @@ class CommentBubbleView: UIButton {
         return label
     }
     let numberLabel = UILabel()
-    init(frame: CGRect)  {
+    override init(frame: CGRect)  {
         super.init(frame: frame)
         self.addSubview(self.bubbleLabel)
         self.addSubview(self.textLabel)
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func layoutSubviews() {

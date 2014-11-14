@@ -9,11 +9,11 @@
 import UIKit
 
 protocol ProductHuntClientDelegate {
-    func productHuntClientDidFetchItems(items: Item[])
+    func productHuntClientDidFetchItems(items: [Item])
 }
 
 protocol ProductHuntClientCommentsDelegate {
-    func productHuntClientDidFetchComments(comments: Comment[])
+    func productHuntClientDidFetchComments(comments: [Comment])
 }
 
 class ProductHuntClient {
@@ -43,25 +43,25 @@ class ProductHuntClient {
     }
     
     func fetchItems() {
-        let url = baseURL.URLByAppendingPathComponent("today")
+        let url = baseURL!.URLByAppendingPathComponent("today")
         self.get(url, completion: self.parseItemsFromData)
     }
     
     func fetchCommentsForItem(item : Item) {
-        let url = baseURL.URLByAppendingPathComponent(item.permalink)
+        let url = baseURL!.URLByAppendingPathComponent(item.permalink)
         self.get(url, completion: self.parseCommentsFromData)
     }
     
     func parseItemsFromData(data: NSData) {
         var error : NSError?
         var json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(), error: &error) as NSDictionary
-        let hunts = json["hunts"]! as NSDictionary[]
+        let hunts = json["hunts"]! as [NSDictionary]
         let items = hunts.map { (itemJSON: NSDictionary) -> Item in
             println(itemJSON["url"]!)
             let url = String(itemJSON["url"]! as NSString)
             let permalink = String(itemJSON["permalink"]! as NSString)
 //            let permalink = "posts/mergerize"
-            let comment_count = itemJSON["comment_count"].integerValue
+            let comment_count = itemJSON!["comment_count"].integerValue
             let rank = Int(itemJSON["rank"]! as NSNumber)
             let votes = Int(itemJSON["votes"]! as NSNumber)
             
@@ -87,7 +87,7 @@ class ProductHuntClient {
     func parseCommentsFromData(data: NSData) {
         var error : NSError?
         var json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(), error: &error) as NSDictionary
-        let commentsJSON = json["comments"]! as NSDictionary[]
+        let commentsJSON = json["comments"]! as [NSDictionary]
         let comments = commentsJSON.map { (commentJSON: NSDictionary) -> Comment in
             let comment_html = String(commentJSON["comment_html"]! as NSString)
             let nsComment = commentJSON["comment"]! as NSString

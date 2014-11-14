@@ -10,7 +10,7 @@ import UIKit
 
 class CommentsViewController: UITableViewController, ProductHuntClientCommentsDelegate {
     var item: Item? = nil
-    var comments: Comment[]? = nil
+    var comments: [Comment]? = nil
     let apiClient = ProductHuntClient()
     
     override func viewDidLoad() {
@@ -23,7 +23,7 @@ class CommentsViewController: UITableViewController, ProductHuntClientCommentsDe
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44
         
-        self.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem()
+        self.navigationItem.leftBarButtonItem = self.splitViewController!.displayModeButtonItem()
     }
     
     // #pragma mark - Table View
@@ -65,7 +65,7 @@ class CommentsViewController: UITableViewController, ProductHuntClientCommentsDe
         return cell
     }
     
-    func productHuntClientDidFetchComments(comments: Comment[]) {
+    func productHuntClientDidFetchComments(comments: [Comment]) {
         println("Did fetch comments \(comments)")
         self.comments = comments
         self.tableView.reloadData()

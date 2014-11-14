@@ -12,7 +12,7 @@ import UIKit
 class MasterViewController: UITableViewController, ProductHuntClientDelegate {
 
     var detailViewController: DetailViewController? = nil
-    var items: Item[]?
+    var items: [Item]?
     let apiClient = ProductHuntClient()
 
     override func awakeFromNib() {
@@ -113,7 +113,7 @@ class MasterViewController: UITableViewController, ProductHuntClientDelegate {
 
     // #pragma mark - ProductHuntClientDelegate
 
-    func productHuntClientDidFetchItems(items: Item[]) {
+    func productHuntClientDidFetchItems(items: [Item]) {
         self.items = items
         println(items)
         self.tableView.reloadData()

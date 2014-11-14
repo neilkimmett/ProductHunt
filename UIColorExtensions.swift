@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
     convenience init(r: Float, g: Float, b: Float, a: Float = 1.0) {
-        self.init(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
+        self.init(r: r/255.0, g: g/255.0, b: b/255.0, a: a)
     }
     class func huntColor() -> UIColor {
         return UIColor(r: 218.0, g: 85.0, b: 47.0)
