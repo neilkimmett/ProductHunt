@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MarksmanFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>ProductHunt.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>288B4102193FF7AE00273522</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28F9DA6B195A1C28003D91C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28F9DA75195A1C28003D91C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

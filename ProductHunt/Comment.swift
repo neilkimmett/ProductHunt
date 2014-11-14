@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MarksmanFramework
 
 struct Comment {
     let index: Integer
@@ -23,7 +24,7 @@ struct Comment {
         let range = NSMakeRange(0, self.comment.utf16count)
         let matches = regex.matchesInString(self.comment, options: NSMatchingOptions(), range: range) as NSTextCheckingResult[]
         for match in matches {
-            attrComment.addAttribute(NSForegroundColorAttributeName, value: UIColor.huntColor(), range: match.range)
+            attrComment.addAttribute(NSForegroundColorAttributeName, value: UIColor(r: 218.0, g: 85.0, b: 47.0), range: match.range)
         }
         return attrComment
     }
